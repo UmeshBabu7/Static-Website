@@ -55,6 +55,7 @@ header{
 main{
     max-width: 1100px;
     margin: 0   auto;
+    padding: 0 16px;
 }
 
 /* hero section */
@@ -66,6 +67,7 @@ main{
 .hero-img{
     width: 100%;
     height: 600px;
+    object-fit: cover;
 }
 
 
@@ -190,6 +192,7 @@ form{
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
+    padding: 14px;
 }
 
 input, textarea{
@@ -267,4 +270,43 @@ input, textarea{
     background-color: #222;
     padding: 16px 0;
     border-top: 1px solid #444;
+}
+
+
+/* responsive design section using media */
+@media (max-width: 768px){
+    .hero h2{
+        font-size: 36px;
+    }
+
+    .service-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+
+    .nav-menu{
+        display: none;
+    }
+    .hero h2{
+        font-size: 20px;
+    }
+
+    .service-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-content{
+        flex-direction: column;
+        row-gap: 20px;
+    }
 }
